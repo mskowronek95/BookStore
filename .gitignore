@@ -1,0 +1,31 @@
+# Build
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+
+# Test results
+TestResults/
+
+# Coverage
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db

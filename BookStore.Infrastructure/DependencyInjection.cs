@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using BookStore.Application.Common.Interfaces;
 
 namespace BookStore.Infrastructure;
 
@@ -16,6 +17,9 @@ public static class DependencyInjection
         {
             options.UseSqlServer(connectionString);
         });
+
+        services.AddScoped<IBookStoreDbContext>(provider =>
+            provider.GetRequiredService<BookStoreDbContext>());
 
         return services;
     }
